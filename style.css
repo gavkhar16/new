@@ -2,8 +2,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-
-  /*font-family: Gotham;*/
 }
 body {
   font-family: "Gotham";
@@ -14,7 +12,7 @@ header {
   height: 85px;
   display: flex;
   align-items: center;
-  padding: 0 30px;
+  padding: 0 50px;
   position: relative;
 }
 
@@ -24,7 +22,7 @@ header {
 }
 
 .navbar {
-  position: absolute; /* чтобы меню было по центру */
+  position: absolute;
   left: 65%;
   transform: translateX(-50%);
   display: flex;
@@ -62,6 +60,64 @@ header {
   font-weight: bold;
 }
 
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+  cursor: pointer;
+}
+.burger span {
+  display: block;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+@media (max-width: 768px) {
+  .burger {
+    display: flex; /* показываем бургер */
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    left: 210px;
+    background: #062261;
+    padding: 10px 15px;
+    border-radius: 8px;
+    gap: 10px;
+    width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+  .logo {
+    width: 100px;
+  }
+}
+
+@media (max-width: 350px) {
+  .logo {
+    width: 70px;
+  }
+  .navbar {
+    left: 80px;
+    width: 110px;
+  }
+  .navbar a {
+    font-size: 13px;
+  }
+  
+  button{
+    width: 150px;
+  }
+}
+
 .hero-section {
   background-color: #030e32;
   opacity: 0.5;
@@ -77,6 +133,7 @@ header {
   width: 567px;
   height: 123px;
   margin-bottom: 18px;
+  text-align: center;
 }
 h1 {
   font-size: 51px;
@@ -98,6 +155,35 @@ button {
   border: none;
   border-radius: 10px;
   font-size: 21px;
+}
+
+@media (max-width: 768px) {
+  .main {
+    width: 450px;
+  }
+  button {
+    width: 250px;
+  }
+}
+@media (max-width: 350px) {
+  .main {
+    width: 250px;
+    height: 90px;
+    padding-left: 10px;
+    margin-bottom: 50px;
+    margin-left: 10px;
+  }
+  h1 {
+    font-size: 35px;
+  }
+  .hero-section h4 {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+  button {
+    font-size: 20px;
+    width: 200px;
+  }
 }
 .section-1 {
   padding: 54px 0;
@@ -128,7 +214,7 @@ button {
   color: #062261;
   padding: 0px;
 }
-.item span {
+.mini {
   font-size: 16px;
 }
 .section-2 {
@@ -141,6 +227,31 @@ button {
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .item {
+    margin-left: 40px;
+    width: 150px;
+  }
+  .square {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 35px;
+  }
+}
+@media (max-width: 350px) {
+  .item {
+    margin-left: 10px;
+  }
+  .square {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 25px;
+  }
+  .mini {
+    font-size: 10px;
+  }
+}
+
 .section-2 div {
   max-width: 713px;
 }
@@ -150,13 +261,30 @@ button {
   font-weight: bold;
   margin-bottom: 37px;
 }
+
+@media (max-width: 768px) {
+  .first {
+    margin-left: 10px;
+  }
+}
+@media (max-width: 350px) {
+  .first {
+    font-size: 25px;
+    margin-left: 10px;
+  }
+  .change {
+    height: 60px;
+    font-size: 15px;
+  }
+}
+
 .section-3 {
   padding: 80px 20px;
   /* padding: 81px, 146px, 114px, 96px; */
   background: #fff;
 }
 
-.section-3 .inside {
+.inside {
   max-width: 1127px;
   margin: 0 auto;
 }
@@ -172,7 +300,7 @@ button {
 }
 
 /* Подзаголовок */
-.section-3 .center {
+.center {
   display: block;
   font-size: 16px;
   color: #062261;
@@ -182,18 +310,18 @@ button {
   line-height: 1.6;
 }
 
-.section-3 .box {
+.box {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 60px;
 }
 
-.section-3 .Lorem {
+.Lorem {
   flex: 1;
 }
 
-.section-3 .third {
+.third {
   font-size: 24px;
   font-weight: 700;
   color: #12306b;
@@ -201,20 +329,60 @@ button {
   line-height: 1.3;
 }
 
-.section-3 .max {
+.max {
   display: block;
   font-size: 16px;
   line-height: 1.7;
   color: #062261;
 }
 
-.section-3 .gray {
+.gray {
   width: 500px;
   height: 380px;
   background-color: #d9d9d9;
   flex-shrink: 0;
 }
 
+@media (max-width: 768px) {
+  .center {
+    padding-right: 20px;
+  }
+  .box {
+    padding-right: 30px;
+  }
+  .title {
+    font-size: 15px;
+  }
+  .max {
+    font-size: 13px;
+  }
+  .gray {
+    width: 330px;
+    height: 300px;
+  }
+}
+@media (max-width: 350px) {
+  .section-3{
+    padding: 80px 0;
+  }
+  center {
+    padding-right: 10px;
+  }
+  .box {
+    gap: 30px;
+    padding-right: 15px;
+  }
+  .title {
+    font-size: 10px;
+  }
+  .max {
+    font-size: 8px;
+  }
+  .gray {
+    width: 180px;
+    height: 350px;
+  }
+}
 .section-4 {
   background-color: #062261;
   padding-top: 102px;
@@ -244,6 +412,46 @@ button {
   line-height: 1.5;
 }
 
+@media (max-width: 768px) {
+  .warp {
+    padding-right: 30px;
+    padding-left: 10px;
+    gap: 30px;
+  }
+  .graybox {
+    width: 310px;
+    height: 330px;
+  }
+  .fourth {
+    margin-bottom: 20px;
+  }
+  .middle {
+    width: 350px;
+    font-size: 15px;
+  }
+}
+@media (max-width: 350px) {
+  .first {
+    font-size: 25px;
+    margin-left: 10px;
+  }
+  .fourth{
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  .change {
+    height: 60px;
+    font-size: 15px;
+  }
+  .middle{
+    width: 150px;
+    font-size: 10px;
+  }
+  .graybox {
+    width: 110px;
+    height: 330px;
+  }
+}
 .section-5 {
   padding-top: 97px;
   padding-bottom: 86px;
@@ -279,6 +487,42 @@ button {
   font-size: 13px;
 }
 
+@media (max-width: 768px) {
+  .infor {
+    width: 450px;
+  }
+  .post {
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+  .additional {
+    margin-bottom: 17px;
+  }
+  .thirdbox {
+    width: 400px;
+    height: 310px;
+  }
+}
+@media (max-width: 350px) {
+  .infor {
+    width: 210px;
+  }
+  .post {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+  .additional {
+    font-size: 8px;
+    margin-bottom: 8px;
+  }
+  .additionalinfor {
+    font-size: 7px;
+  }
+  .thirdbox {
+    width: 190px;
+    height: 250px;
+  }
+}
 .section-6 {
   background-image: url("./photo/background.png");
   background-size: cover;
@@ -287,9 +531,9 @@ button {
 }
 
 .difficult {
-  margin: 0;
-  margin-left: 79px;
-  margin-right: 48px;
+  max-width: 1250px; /* ограничиваем ширину */
+  margin: 0 auto; /* выравниваем по центру */
+  padding: 0 48px; /* отступы слева и справа ВНУТРИ */
   display: flex;
   gap: 280px;
 }
@@ -310,7 +554,6 @@ button {
   display: flex;
   flex-direction: row;
   gap: 31px;
-  padding-left: 48px;
 }
 .diagram {
   width: 127px;
@@ -327,6 +570,7 @@ button {
     #ec4d8f 24.55%,
     rgba(240, 87, 122, 0) 75.12%
   );
+  opacity: 30%;
 }
 .diagrams div:first-child {
   margin-top: 142px;
@@ -335,10 +579,52 @@ button {
   margin-top: 60px;
 }
 
+@media (max-width: 768px) {
+  .difficult {
+    gap: 90px;
+    padding-bottom: 50px;
+  }
+  .question {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .term {
+    width: 280px;
+  }
+  .diagrams {
+    gap: 15px;
+  }
+  .diagram {
+    width: 90px;
+    height: 200px;
+  }
+}
+@media (max-width: 350px) {
+  .difficult {
+    gap: 35px;
+    padding-left: 10px;
+    padding-bottom: 80px;
+  }
+  .question {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .term {
+    font-size: 12px;
+    width: 150px;
+  }
+  .diagrams {
+    gap: 8px;
+  }
+  .diagram {
+    width: 30px;
+    height: 200px;
+  }
+}
 footer {
   background-color: #030e32;
   color: #ffffff;
-  padding: 40px 60px;
+  padding: 40px 180px;
   line-height: 1.6;
 }
 
@@ -347,10 +633,6 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 30px;
-}
-
-.topright {
-  gap: 19px;
 }
 
 .logo-and-nav {
@@ -372,7 +654,6 @@ footer {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-
 }
 
 .nav-links li a {
@@ -380,6 +661,7 @@ footer {
   text-decoration: none;
   font-size: 12px;
   transition: color 0.4s;
+  text-wrap: nowrap;
 }
 
 .nav-links li a:hover {
@@ -389,12 +671,14 @@ footer {
 .subscribe {
   max-width: 500px;
   width: 100%;
+  position: relative;
 }
 
 .subscribe h4 {
   font-size: 16px;
   margin-bottom: 10px;
   font-weight: 700;
+  text-wrap: nowrap;
 }
 
 .input-group {
@@ -459,8 +743,9 @@ footer {
 
 .footer-bottom {
   display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -480,4 +765,74 @@ footer {
   font-size: 12px;
   color: #888;
   margin-top: 10px;
+}
+.paragraph {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.big {
+  width: 120px;
+  height: 80px;
+}
+@media (max-width: 768px) {
+  footer {
+    padding: 40px 70px;
+  }
+  .first {
+    font-size: 25px;
+    margin-left: 10px;
+  }
+  .footer-top{
+    flex-direction: column;
+  }
+  .input-group{
+    position: static;
+    width: 400px;
+  }
+  .input-group button{
+    top: 40px;
+    right: 105px;
+    width: 100px;
+    height: 63px;
+  }
+  .footer-bottom{
+    align-items: center;
+  }
+  
+}
+@media (max-width: 350px) {
+  footer {
+    padding: 40px 10px;
+  }
+  .nav-links{
+    width: 300px;
+  }
+  .subscribe h4{
+    font-size: 13px;
+  }
+  .first {
+    font-size: 25px;
+    margin-left: 10px;
+  }
+  .input-group{
+    padding-right: 10px;
+    width: 300px;
+  }
+  .input-group button{
+    top: 35px;
+        right: 2px;
+        width: 80px;
+        font-size: 10px;
+  }
+  .footer-middle{
+    width: 300px;
+  }
+  
+}
+@media (max-width: 350px) {
+  .paragraph {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
