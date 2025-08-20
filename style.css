@@ -76,7 +76,7 @@ header {
 }
 @media (max-width: 768px) {
   .burger {
-    display: flex; /* показываем бургер */
+    display: flex;
   }
 
   .navbar {
@@ -101,7 +101,7 @@ header {
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 351px) {
   .logo {
     width: 70px;
   }
@@ -112,8 +112,8 @@ header {
   .navbar a {
     font-size: 13px;
   }
-  
-  button{
+
+  button {
     width: 150px;
   }
 }
@@ -165,24 +165,29 @@ button {
     width: 250px;
   }
 }
-@media (max-width: 350px) {
+@media (max-width: 768px) {
+  h1 {
+    font-size: 45px;
+  }
+}
+@media (max-width: 351px) {
   .main {
-    width: 250px;
-    height: 90px;
+    width: 230px;
+    height: 70px;
     padding-left: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     margin-left: 10px;
   }
   h1 {
-    font-size: 35px;
+    font-size: 25px;
   }
   .hero-section h4 {
     font-size: 15px;
     margin-bottom: 15px;
   }
   button {
-    font-size: 20px;
-    width: 200px;
+    font-size: 15px;
+    width: 150px;
   }
 }
 .section-1 {
@@ -190,8 +195,9 @@ button {
 }
 
 .bottom-block {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(186px, 1fr));
+  gap: 40px; /* расстояние между кубиками */
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -238,7 +244,7 @@ button {
     margin-bottom: 35px;
   }
 }
-@media (max-width: 350px) {
+@media (max-width: 351px) {
   .item {
     margin-left: 10px;
   }
@@ -267,14 +273,16 @@ button {
     margin-left: 10px;
   }
 }
-@media (max-width: 350px) {
+@media (max-width: 351px) {
   .first {
-    font-size: 25px;
+    font-size: 20px;
     margin-left: 10px;
+    margin-bottom: 20px;
   }
   .change {
+    width: 125px;
     height: 60px;
-    font-size: 15px;
+    font-size: 13px;
   }
 }
 
@@ -319,6 +327,7 @@ button {
 
 .Lorem {
   flex: 1;
+  width: 551px;
 }
 
 .third {
@@ -332,6 +341,7 @@ button {
 .max {
   display: block;
   font-size: 16px;
+  font-size: 18px;
   line-height: 1.7;
   color: #062261;
 }
@@ -347,7 +357,9 @@ button {
   .center {
     padding-right: 20px;
   }
+
   .box {
+    gap: 35px;
     padding-right: 30px;
   }
   .title {
@@ -361,8 +373,31 @@ button {
     height: 300px;
   }
 }
-@media (max-width: 350px) {
-  .section-3{
+@media (max-width: 1000px) {
+  .inside {
+    padding-right: 20px;
+  }
+  .gray {
+    width: 430px;
+  }
+}
+@media (max-width: 650px) {
+  .gray {
+    width: 200px;
+    height: 450px;
+  }
+}
+@media (max-width: 480px) {
+  .gray {
+    width: 150px;
+    height: 480px;
+  }
+  .max {
+    font-size: 10px;
+  }
+}
+@media (max-width: 351px) {
+  .section-3 {
     padding: 80px 0;
   }
   center {
@@ -375,11 +410,9 @@ button {
   .title {
     font-size: 10px;
   }
-  .max {
-    font-size: 8px;
-  }
+
   .gray {
-    width: 180px;
+    width: 100px;
     height: 350px;
   }
 }
@@ -390,7 +423,6 @@ button {
 }
 .warp {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 118px;
   max-width: 1143px;
@@ -407,11 +439,42 @@ button {
   margin-bottom: 34px;
 }
 .middle {
-  width: 551px;
+  /* width: 551px; */
   display: block;
   line-height: 1.5;
 }
+@media (max-width: 1200px) {
+  .warp {
+    padding-right: 30px;
+    padding-left: 10px;
+    /* gap: 30px; */
+  }
+  .graybox {
+    width: 400px;
+    /* height: 330px; */
+  }
 
+  /* .middle {
+    font-size: 15px;
+  } */
+}
+@media (max-width: 1100px) {
+  .warp {
+    padding-left: 30px;
+    gap: 90px;
+  }
+  .graybox {
+    width: 350px;
+  }
+  /* .middle {
+    width: 400px;
+  } */
+}
+@media (max-width: 850px) {
+  .graybox {
+    height: 510px;
+  }
+}
 @media (max-width: 768px) {
   .warp {
     padding-right: 30px;
@@ -425,31 +488,52 @@ button {
   .fourth {
     margin-bottom: 20px;
   }
-  .middle {
+  /* .middle {
     width: 350px;
+    font-size: 15px;
+  } */
+}
+@media (max-width: 650px) {
+  .graybox {
+    width: 250px;
+    height: 710px;
+  }
+  .middle {
     font-size: 15px;
   }
 }
-@media (max-width: 350px) {
+@media (max-width: 480px) {
+  .fourth {
+    font-size: 20px;
+  }
+  .graybox {
+    width: 150px;
+    height: 510px;
+  }
+  .middle {
+    font-size: 12px;
+  }
+}
+@media (max-width: 351px) {
+  .warp {
+    gap: 15px;
+  }
   .first {
     font-size: 25px;
     margin-left: 10px;
   }
-  .fourth{
+  .fourth {
     margin-bottom: 10px;
     font-size: 20px;
   }
-  .change {
-    height: 60px;
-    font-size: 15px;
-  }
-  .middle{
-    width: 150px;
+
+  .middle {
+    /* width: 150px; */
     font-size: 10px;
   }
   .graybox {
-    width: 110px;
-    height: 330px;
+    width: 70px;
+    height: 530px;
   }
 }
 .section-5 {
@@ -459,7 +543,6 @@ button {
 .sec5 {
   display: flex;
   align-items: center;
-  gap: 118px;
   max-width: 1164px;
   gap: 61px;
   margin: 0 auto;
@@ -473,6 +556,7 @@ button {
   max-width: 593px;
 }
 .post {
+  width: 593px;
   font-weight: 325;
   font-size: 18px;
   margin-bottom: 45px;
@@ -486,28 +570,68 @@ button {
   font-weight: 325;
   font-size: 13px;
 }
-
+@media (max-width: 950px) {
+  .infor {
+    width: 500px;
+  }
+  .post {
+    width: 490px;
+  }
+}
 @media (max-width: 768px) {
   .infor {
     width: 450px;
   }
   .post {
+    width: 400px;
     font-size: 15px;
     margin-bottom: 18px;
+  }
+  .sec5 {
+    padding-right: 20px;
   }
   .additional {
     margin-bottom: 17px;
   }
   .thirdbox {
-    width: 400px;
-    height: 310px;
+    width: 380px;
+    /* height: 310px; */
   }
 }
-@media (max-width: 350px) {
+@media (max-width: 650px) {
+  .infor {
+    padding-right: 30px;
+    width: 280px;
+  }
+  .post {
+    width: 270px;
+  }
+  .sec5 {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 650px) {
+  .infor {
+    padding-right: 30px;
+    width: 230px;
+  }
+  .post {
+    width: 220px;
+  }
+  .thirdbox {
+    width: 180px;
+  }
+}
+@media (max-width: 351px) {
   .infor {
     width: 210px;
   }
+  .sec5 {
+    gap: 30px;
+  }
   .post {
+    width: 150px;
     font-size: 10px;
     margin-bottom: 10px;
   }
@@ -531,9 +655,9 @@ button {
 }
 
 .difficult {
-  max-width: 1250px; /* ограничиваем ширину */
-  margin: 0 auto; /* выравниваем по центру */
-  padding: 0 48px; /* отступы слева и справа ВНУТРИ */
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 48px;
   display: flex;
   gap: 280px;
 }
@@ -578,10 +702,44 @@ button {
 .diagrams div:nth-child(2) {
   margin-top: 60px;
 }
-
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
+  .difficult {
+    gap: 150px;
+  }
+}
+@media (max-width: 1200px) {
+  .difficult {
+    gap: 100px;
+  }
+  .term {
+    width: 400px;
+  }
+}
+@media (max-width: 1100px) {
+  .term {
+    width: 350px;
+  }
+  .diagrams {
+    gap: 25px;
+  }
+  .diagram {
+    width: 90px;
+  }
+}
+@media (max-width: 900px) {
   .difficult {
     gap: 90px;
+  }
+  .diagrams {
+    gap: 10px;
+  }
+  .term {
+    width: 280px;
+  }
+}
+@media (max-width: 768px) {
+  .difficult {
+    /* gap: 90px; */
     padding-bottom: 50px;
   }
   .question {
@@ -589,37 +747,35 @@ button {
     margin-bottom: 20px;
   }
   .term {
-    width: 280px;
+    width: 350px;
   }
   .diagrams {
-    gap: 15px;
-  }
-  .diagram {
-    width: 90px;
-    height: 200px;
+    display: none;
   }
 }
-@media (max-width: 350px) {
+@media (max-width: 457px) {
+  .term {
+    width: 250px;
+  }
+}
+@media (max-width: 351px) {
   .difficult {
-    gap: 35px;
     padding-left: 10px;
     padding-bottom: 80px;
   }
   .question {
-    font-size: 15px;
+    font-size: 20px;
     margin-bottom: 10px;
   }
   .term {
-    font-size: 12px;
-    width: 150px;
+    font-size: 15px;
+    width: 250px;
   }
-  .diagrams {
-    gap: 8px;
-  }
-  .diagram {
-    width: 30px;
-    height: 200px;
-  }
+}
+@media (max-width: 300px) {
+.term{
+  width: 170px;
+}
 }
 footer {
   background-color: #030e32;
@@ -673,58 +829,22 @@ footer {
   width: 100%;
   position: relative;
 }
+@media (max-width: 1050px) {
+  .footer-bottom {
+    align-items: center;
+  }
+}
+@media (max-width: 800px) {
+  .subscribe {
+    position: unset;
+  }
+}
 
 .subscribe h4 {
   font-size: 16px;
   margin-bottom: 10px;
   font-weight: 700;
   text-wrap: nowrap;
-}
-
-.input-group {
-  position: absolute;
-  top: 4357px;
-  left: 814px;
-  width: 470px;
-  height: 71px;
-  opacity: 1;
-}
-
-.input-group input {
-  width: 100%;
-  height: 100%;
-  padding-right: 180px; /* пространство под кнопку */
-  padding-left: 20px;
-  background-color: #1a2d57;
-  border: none;
-  border-radius: 12px;
-  font-size: 16px;
-  color: #fff;
-  outline: none;
-}
-
-.input-group input::placeholder {
-  color: #b0bcd6;
-}
-
-.input-group button {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  width: 170.67px;
-  height: 61px;
-  background: linear-gradient(135deg, #d335ff, #7f00ff);
-  border: none;
-  border-radius: 10px;
-  font-weight: bold;
-  color: #fff;
-  font-size: 14px;
-  cursor: pointer;
-  opacity: 1;
-}
-
-.input-group button:hover {
-  background: linear-gradient(135deg, #b300e6, #6600cc);
 }
 
 .divider {
@@ -775,6 +895,14 @@ footer {
   width: 120px;
   height: 80px;
 }
+@media (max-width: 1050px) {
+  .footer-bottom {
+    align-items: center;
+  }
+  .footer-top {
+    flex-direction: column;
+  }
+}
 @media (max-width: 768px) {
   footer {
     padding: 40px 70px;
@@ -783,56 +911,74 @@ footer {
     font-size: 25px;
     margin-left: 10px;
   }
-  .footer-top{
-    flex-direction: column;
-  }
-  .input-group{
-    position: static;
-    width: 400px;
-  }
-  .input-group button{
-    top: 40px;
-    right: 105px;
-    width: 100px;
-    height: 63px;
-  }
-  .footer-bottom{
+
+  .footer-bottom {
     align-items: center;
   }
-  
 }
-@media (max-width: 350px) {
+@media (max-width: 650px){
+  .footer-middle{
+    width: 350px;
+  }
+  .input-group button{
+   font-size: 12px;
+    width: 100px;
+  }
+}
+@media (max-width: 650px){
+  .footer-middle{
+    width: 250px;
+  }
+}
+@media (max-width: 351px) {
   footer {
     padding: 40px 10px;
   }
-  .nav-links{
+  .nav-links {
     width: 300px;
   }
-  .subscribe h4{
+  .subscribe h4 {
     font-size: 13px;
   }
   .first {
     font-size: 25px;
     margin-left: 10px;
   }
+  .footer-middle {
+    width: 250px;
+  }
   .input-group{
-    padding-right: 10px;
-    width: 300px;
+height: 80px;
+font-size: 10px;
   }
   .input-group button{
-    top: 35px;
-        right: 2px;
-        width: 80px;
-        font-size: 10px;
+    height: 60px;
+    width: 90px;
   }
-  .footer-middle{
-    width: 300px;
-  }
-  
 }
 @media (max-width: 350px) {
   .paragraph {
     padding-left: 20px;
     padding-right: 20px;
   }
+
+}
+
+.input-group {
+  display: flex;
+  background: #132053;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.input-group button {
+  width: 170px;
+  margin: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  background: #132053;
+  padding-left: 20px;
+  border: none;
 }
